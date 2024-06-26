@@ -1,0 +1,13 @@
+Creacion de clases 
+
+
+//Modificador -class de clase -Nombre de la clase
+public class coche{
+
+}
+
+
+// Creacion de objetos 
+
+// Nombre de la clase - nombre de la instancia o objeto - Constructor
+Coche coche1 = new Coche();
