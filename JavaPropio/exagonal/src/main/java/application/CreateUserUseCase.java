@@ -7,11 +7,13 @@ public class CreateUserUseCase {
 
     private final UserService userService;
 
-    public CreateUserUseCase (UserService userService) {
-        this.userService = userService;
-    }
 
-    public void execute (User user) {
+    public CreateUserUseCase (UserService userService ) {
+        this.userService = userService;
+        
+    } 
+
+    public void executeCreateUser (User user) {
         userService.createUser(user);
     }
 
