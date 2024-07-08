@@ -14,6 +14,7 @@ public class Main {
         Equipo equipo = new Equipo();
         Equipo equipo2 = new Equipo();
         Jugador jugador = new Jugador();
+        Jugador jugador2 = new Jugador();
 
         // Inserto los jugadores
         jugador.setEdad(25);
@@ -21,13 +22,20 @@ public class Main {
         jugador.setNombre("Daniel Tobon");
         Controller.getController().controladorJugadores.put(1, jugador);
 
+        jugador2.setEdad(22);
+        jugador2.setPosicion("LM");
+        jugador2.setNombre("Fernando Camacho");
+        Controller.getController().controladorJugadores.put(2, jugador2);
+
+
 
         // Inserto los equipos
         equipo.setNombre("Bucaramanga");
         Controller.getController().controladorEquipos.put(1, equipo);
 
         equipo2.setNombre("Medellin");
-        equipo2.lstJugadores.put(1, jugador); // Inserto el jugador al equipo
+        equipo2.lstJugadores.put(1, jugador);
+        equipo2.lstJugadores.put(2, jugador2);  // Inserto el jugador al equipo
         Controller.getController().controladorEquipos.put(2, equipo2);
 
 
@@ -48,7 +56,7 @@ public class Main {
 
         for (Integer llave : listaLlavesEquipos) {
             Equipo equipoCorrespondiente = Controller.getController().controladorEquipos.get(llave);
-            System.out.println("Código del equipo: " + llave);
+            System.out.println("\n\n\nCódigo del equipo: " + llave);
             System.out.println("Nombre: " + equipoCorrespondiente.getNombre());
 
             // Iterar sobre las llaves de los jugadores del equipo
