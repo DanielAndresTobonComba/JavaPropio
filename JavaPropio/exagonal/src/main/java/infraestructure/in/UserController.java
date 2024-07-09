@@ -1,24 +1,21 @@
 package infraestructure.in;
 import application.CreateUserUseCase;
-import application.DeleteUserUseCase;
+import application.eliminarUsuario;
 import domain.entity.User;
 import java.util.Scanner;
 
 public class UserController {
 
     private CreateUserUseCase createUserUseCase; 
-    private DeleteUserUseCase deleteUserUseCase;
+    private eliminarUsuario deleteUserUseCase;
 
     public UserController(CreateUserUseCase createUserUseCase) {
         this.createUserUseCase = createUserUseCase;
     }
 
-    public UserController(DeleteUserUseCase deleteUserUseCase) {
+    public UserController(eliminarUsuario deleteUserUseCase) {
         this.deleteUserUseCase = deleteUserUseCase;
     }
-
-
-
 
     public void createUser () {
 
@@ -50,6 +47,7 @@ public class UserController {
             System.out.println("Digite el codigo del usuario para eliminar");
             id = scanner.nextInt();
 
+            // Accedo a eliminar usuario que llega deleteUserUseCase que es los metodos de la interfaz
             deleteUserUseCase.executeDeleteUser(id);
                 
         }
