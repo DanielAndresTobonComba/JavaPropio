@@ -15,5 +15,11 @@ public class Main {
         FacturaImpresion impresion = new FacturaImpresion(factura);
 
         impresion.imprimir();
+
+        BaseDeDatosPersistencia persistenciaDB = new BaseDeDatosPersistencia();
+        persistenciaDB.guardar(factura);
+
+        ArchivoPersistencia persistenciaArchivo = new ArchivoPersistencia(); 
+        persistenciaArchivo.guardar(factura);
     }
 }
