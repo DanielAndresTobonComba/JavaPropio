@@ -7,11 +7,10 @@ public class Main {
 
         Factura factura = new Factura(libro, 2, 0.1, 0); 
 
-
-
         System.out.println("Precio con impuestos: " + factura.calculaTotal()); 
         
 
+        //Instancio la clase factura impresion y envio la factura
         FacturaImpresion impresion = new FacturaImpresion(factura);
 
         impresion.imprimir();
